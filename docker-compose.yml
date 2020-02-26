@@ -18,7 +18,7 @@ services:
   php:
     container_name: lnmp-php
     build:
-      context: ./
+      context: ./etc/
       dockerfile: dockerfile-php
       args:
         buildno: 1
