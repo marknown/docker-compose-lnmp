@@ -9,8 +9,10 @@
 5. 额外的php扩展请在 etc/dockerfile-php 中添加
 
 ## 下载
+```
 git clone https://github.com/marknown/docker-compose-lnmp.git
 cd docker-compose-lnmp
+```
 
 ## 开启
 ```
