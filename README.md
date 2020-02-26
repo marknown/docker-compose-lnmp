@@ -23,3 +23,11 @@ docker-compose up -d
 ```
 docker-compose down
 ```
+
+## 常用链接
+```
+http://127.0.0.1/index.html
+http://127.0.0.1/index.php
+http://127.0.0.1/mysql.php
+http://127.0.0.1/redis.php
+```
