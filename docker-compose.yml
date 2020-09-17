@@ -14,7 +14,8 @@ services:
       TZ: Asia/Shanghai
     restart: always
     networks:
-      - networking
+      default:
+        ipv4_address: 172.16.0.10
   php:
     container_name: lnmp-php
     build:
@@ -30,7 +31,8 @@ services:
       - ./log/php:/var/log/php
     restart: always
     networks:
-      - networking
+      default:
+        ipv4_address: 172.16.0.20
   mysql:
     container_name: lnmp-mysql
     image: mysql:5.6
@@ -45,7 +47,8 @@ services:
       TZ: Asia/Shanghai
     #command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --innodb_use_native_aio=0
     networks:
-      - networking
+      default:
+        ipv4_address: 172.16.0.30
   redis:
     container_name: lnmp-redis
     image: redis
@@ -59,6 +62,11 @@ services:
     environment:
       TZ: Asia/Shanghai
     networks:
-      - networking
+      default:
+        ipv4_address: 172.16.0.40
+
 networks:
-  networking:
+  default:
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
